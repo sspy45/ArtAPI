@@ -31,10 +31,10 @@ class UsersController < ApplicationController
     user.destroy
     render json: user
   end
-  
+
   private
 
   def user_params
-    params[:user].permit(:username)
+    params.require(:user).permit(:username)
   end
 end

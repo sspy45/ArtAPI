@@ -6,6 +6,6 @@ class CreateArtworkShares < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :artwork_shares, [:artwork_id, :viewer_id]
+    add_index :artwork_shares, [:artwork_id, :viewer_id], unique: true
   end
 end
